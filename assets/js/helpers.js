@@ -29,5 +29,6 @@ function displaySidebar () {
 }
 
 function isMist () {
-  return CONFIG.scheme === 'Mist';
+    //return CONFIG.scheme === 'Mist';
+    return true;
 }
