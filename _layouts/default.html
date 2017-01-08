@@ -20,6 +20,7 @@
     <div id="main" class="main">
         <div class="main-inner">
             <div id="content" class="content">
+
                 {% for post in paginator.posts %}
                 <div id="posts" class="posts-expand">
                     <div class="post post-type-normal ">
@@ -73,13 +74,6 @@
                 </div>
                 {% endfor %}
 
-                <div class="pagination">
-                    <span class="page-number current">1</span>
-                    <a class="page-number" href="/page/2/">2</a>
-                    <span class="space">&hellip;</span>
-                    <a class="page-number" href="/page/8/">8</a>
-                    <a class="extend next" rel="next" href="/page/2/">&raquo;</a>
-                </div>
             </div>
         </div>
 
