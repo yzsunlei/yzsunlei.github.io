@@ -1,0 +1,5 @@
+[import time]
+name: [name]
+email: [email]
+lang: [lang]
+time: [time.asctime()]
