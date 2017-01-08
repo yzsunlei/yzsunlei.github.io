@@ -20,12 +20,13 @@
     <div id="main" class="main">
         <div class="main-inner">
             <div id="content" class="content">
+                {% for post in paginator.posts %}
                 <div id="posts" class="posts-expand">
                     <div class="post post-type-normal ">
                         <div class="post-header">
                             <h1 class="post-title">
-                                <a class="post-title-link" href="/2016/12/07/angular-doc/">
-                                    你会用AngularJS，但你会写AngularJS文档么？
+                                <a class="post-title-link" href="{{ site.BASE_PATH }}{{ post.url }}">
+                                    {{ post.title }}
                                 </a>
                             </h1>
                             <div class="post-meta">
@@ -38,24 +39,31 @@
                                 </span>
                                 <span class="post-comments-count">
                                     &nbsp; | &nbsp;
-                                    <a href="/2016/12/07/angular-doc/#comments" >
-                                    <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/07/angular-doc/"></span>
+                                    <a href="{{ site.BASE_PATH }}{{ post.url }}#comments" >
+                                    <span class="post-comments-count ds-thread-count" data-thread-key="{{ site.BASE_PATH }}{{ post.url }}"></span>
                                     </a>
                                 </span>
                             </div>
                         </div>
                         <div class="post-body">
                             <p><em>涉及知识：gulp javascript</em><br><em>建议阅读：4分钟</em></p>
-                            <p>我们经常在写代码的时候要求写好注释，方便日后维护。但其实注释还有一个重要的用途：<strong>生成API文档。</strong></p>
+                            <p>
+                                {% if post.shortinfo %}
+                                {{ post.shortinfo }}
+                                {% elsif post.description %}
+                                {{ post.description }}
+                                {% else %}
+                                {{ post.excerpt }}
+                            </p>
                             <div class="post-more-link text-center">
-                                <a class="btn" href="/2016/12/07/angular-doc/#more">
+                                <a class="btn" href="{{ site.BASE_PATH }}{{ post.url }}#more">
                                     阅读全文 &raquo;
                                 </a>
                             </div>
                             <hr>
                             <p>
-                                作者：<a href="http://yalishizhude.github.io/about/">亚里士朱德</a>&emsp;博客：<a href="http://yalishizhude.github.io">http://yalishizhude.github.io</a><br>
-                                <b>跟作者一起成长请<a href="https://github.com/yalishizhude">follow</a>&emsp;订阅博客请<a href="https://github.com/yalishizhude/yalishizhude.github.io">star</a><b>
+                                作者：<a href="http://yzsunlei.github.io/about/">孙磊</a>&emsp;博客：<a href="http://yzsunlei.github.io">http://yzsunlei.github.io</a><br>
+                                <b><a href="https://github.com/yzsunlei">关注</a>我，咱们一起来改变世界<b>
                             </p>
                         </div>
                         <div class="post-footer">
@@ -63,9 +71,14 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
                 <div class="pagination">
-                    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+                    <span class="page-number current">1</span>
+                    <a class="page-number" href="/page/2/">2</a>
+                    <span class="space">&hellip;</span>
+                    <a class="page-number" href="/page/8/">8</a>
+                    <a class="extend next" rel="next" href="/page/2/">&raquo;</a>
                 </div>
             </div>
         </div>
