@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Vue1.0学习笔记
 ---
 
