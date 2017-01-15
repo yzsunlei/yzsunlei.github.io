@@ -1,7 +1,7 @@
-# Vue.js官方教程学习(V1.0)
-* Author：Ray Sun
-* Date：2016/07/15
-* 教程地址：http://v1.vuejs.org/guide/
+---
+layout: default
+title: Vue1.0学习笔记
+---
 
 # 安装
 * 兼容性：不支持IE8及其以下版本，因为Vue使用了IE8不能实现的ECMAScript特性，Vue支持所有兼容ECMAScript 5的浏览器
@@ -16,7 +16,7 @@
 * Vue没有控制器概念，组件的自定义逻辑可以分割在这些钩子中
 * Vue模板从根本上不同于基于字符串的模板
 * Vue指令和特殊特性内不能用插值
-* 计算属性(`computed`) VS. $watch
+* 计算属性(`computed`) VS. `$watch`
 * 我们可以传给`v-bind`一个对象，以动态的切换`class`
 
 # 数据绑定
@@ -97,34 +97,34 @@
 # 响应式原理
 * Vue.js最显著的一个功能是响应系统--模型只是普通对象，修改它则更新视图
 * 受ES5的限制,Vue.js不能检测到对象属性的添加或删除;属性必须在data对象上才能让vue.js转换它,才能让它是响应的
-* 有办法在实例创建后添加属性并且让它是响应的 $set(key, value)
-* 对于普通数据对象，可以使用全局方法Vue.set(object, key, value)
-* 有时想向已有对象上添加一些属性,比如使用Object.assign()或者_.extend()添加属性。这样添加的不会触发更新
-* //不使用 Object.assign(this.someObject, {a: 1, b: 2})
-* //使用 this.someObject = Object.assign({}, this.someObject, {a: 1, b: 2});
+* 有办法在实例创建后添加属性并且让它是响应的 `$set(key, value)`
+* 对于普通数据对象，可以使用全局方法`Vue.set(object, key, value)`
+* 有时想向已有对象上添加一些属性,比如使用`Object.assign()`或者`_.extend()`添加属性。这样添加的不会触发更新
+* //不使用 `Object.assign(this.someObject, {a: 1, b: 2})`
+* //使用 `this.someObject = Object.assign({}, this.someObject, {a: 1, b: 2});`
 * Vue默认异步更新DOM，每当观察到数据变化时，Vue就开始一个队列，将同一事件循环内所有的数据缓存起来
-* 为了在数据变化之后等待Vue.js完成更新DOM，可以在数据变化之后立即使用Vue.nextTick(callback)
+* 为了在数据变化之后等待Vue.js完成更新DOM，可以在数据变化之后立即使用`Vue.nextTick(callback)`
 
 # 自定义指令
 * 自定义指令提供一种机制将数据的变化映射为DOM行为
-* vue.directive(id, definition) 方法注册一个全局自定义指令，接收两个参数，指令ID和定义对象
+* `vue.directive(id, definition)` 方法注册一个全局自定义指令，接收两个参数，指令ID和定义对象
 * 也可以用组件的directives选项注册一个局部自定义指令
-* 定义对象可以提供几个钩子函数：bind, update, unbind
+* 定义对象可以提供几个钩子函数：`bind`, `update`, `unbind`
 * vue通过递归遍历DOM树来编译模块
 
 # 自定义过滤器
-* 使用全局方法Vue.filter()注册一个自定义过滤器，接收两个参数：过滤器ID和过滤器函数
+* 使用全局方法`Vue.filter()`注册一个自定义过滤器，接收两个参数：过滤器ID和过滤器函数
 * 可以接收任意数量的函数
-* 双向过滤器 read: function(val){} write: function(val, oldVal){}
+* 双向过滤器 `read: function(val){} write: function(val, oldVal){}`
 * 如果过滤器参数没有用引号包起来，则它会在当前的vm作用域内动态计算
 
 # 混合
 * 混合对象可以包含任意的组件选项，当组件使用了混合对象时，混合对象的所有选项都将被"混入"组件自己的选项中
 * 当混合对象与组件包含同名选项时，这些选项将以适当的策略合并
 * 同名钩子函数被并入一个数组，因而都会被调用
-* 值为对象的选项(methods,components,directives)将合并到同一个对象中，如果键冲突则组件的选项优先
+* 值为对象的选项(`methods`,`components`,`directives`)将合并到同一个对象中，如果键冲突则组件的选项优先
 * 注意vue.extend()使用同样的合并策略
-* 自定义选项合并，向Vue.config.optionMergeStrategies添加一个函数
+* 自定义选项合并，向`Vue.config.optionMergeStrategies`添加一个函数
 
 # 插件
 * Vue.js插件应当有一个公开方法install，方法的第一个参数是vue构造器
