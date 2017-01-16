@@ -2,50 +2,7 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-<div id="posts" class="posts-expand">
-    <div class="post post-type-normal ">
-        <div class="post-header">
-            <h1 class="post-title">
-                <a class="post-title-link" href="{{ post.url }}">
-                    {{ post.title }}
-                </a>
-            </h1>
-            <div class="post-meta">
-                                <span class="post-time">
-                                    发表于 {{ post.date }}
-                                </span>
-                <span class="post-category">
-                                    &nbsp; | &nbsp; 分类于
-                                    <a href="/categories/WEB架构/">WEB架构</a>
-                                </span>
-                <span class="post-comments-count">
-                                    &nbsp; | &nbsp;
-                                    <a href="{{ post.url }}#comments" >
-                                    <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.url }}"></span>
-                                    </a>
-                                </span>
-            </div>
-        </div>
-        <div class="post-body">
-            <p><em>涉及知识：gulp javascript</em><br><em>建议阅读：4分钟</em></p>
-            <p>
-                {{ post.description }}
-            </p>
-            <div class="post-more-link text-center">
-                <a class="btn" href="{{ post.url }}#more">
-                    阅读全文 &raquo;
-                </a>
-            </div>
-            <hr>
-            <p>
-                作者：<a href="http://yzsunlei.github.io/about/">孙磊</a>&emsp;博客：<a href="http://yzsunlei.github.io">http://yzsunlei.github.io</a><br>
-                <b><a href="https://github.com/yzsunlei">关注</a>我，咱们一起来改变世界<b>
-            </p>
-        </div>
-        <div class="post-footer">
-            <div class="post-eof"></div>
-        </div>
-    </div>
+<div class="page">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {{ content }}
 </div>
-{% endfor %}
