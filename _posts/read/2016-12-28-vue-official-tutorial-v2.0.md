@@ -1,7 +1,10 @@
-# vue.js官方教程学习(v2.0)
-* Author: RaySun
-* Date: 2016/11/28
-* 教程地址：http://cn.vuejs.org/v2/guide/
+---
+layout: post
+title: Vue2.0学习笔记
+category: read
+tag: vue
+readtime: 10
+---
 
 #  模板语法
 * `v-once`执行一次性插值，当数据改变时，插值处的数据对象不会更新

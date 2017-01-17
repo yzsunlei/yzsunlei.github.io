@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript中history和hash使用小结
-category: 编程
+category: program
 tag: Javascript hash
 readtime: 5
 ---
