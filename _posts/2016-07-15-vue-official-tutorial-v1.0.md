@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Vue1.0学习笔记
+category: 读书
+tag: vue
+readtime: 10
 ---
 
 # 安装
