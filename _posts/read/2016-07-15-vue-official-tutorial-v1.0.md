@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue1.0学习笔记
-category: 读书
+category: read
 tag: vue
 readtime: 10
 ---
