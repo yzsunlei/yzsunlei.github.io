@@ -3,6 +3,7 @@ layout: post
 title: Vue2.0教程笔记
 category: 阅读
 tag: vue
+exception: 
 readtime: 10
 ---
 

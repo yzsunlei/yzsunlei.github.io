@@ -3,6 +3,7 @@ layout: post
 title: JavaScript中history和hash使用小结
 category: 编程
 tag: Javascript hash
+exception: 
 readtime: 5
 ---
 
