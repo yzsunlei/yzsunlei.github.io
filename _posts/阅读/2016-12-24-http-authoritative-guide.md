@@ -96,6 +96,7 @@ readtime: 15
 * Web应用层：提供了大部分的内容管理逻辑
 
 # 识别、认证与安全
+* ...
 
 # 基本认证机制
 * HTTP定义了两个官方的认证协议：基本认证和摘要认证
@@ -110,6 +111,7 @@ readtime: 15
 * 摘要函数有时也被称为加密的校验和、单向散列函数或指纹函数
 
 # 安全HTTP
+* ...
 
 # 实体和编码
 * HTTP要确保它所承载的“货物”满足以下条件：
@@ -138,25 +140,25 @@ readtime: 15
 * 3种类别的转码：格式转换、信息综合、内容注入
 
 # web主机托管
-
+* ...
 
 # 发布系统
-
+* ...
 
 # 重定向与负载均衡
-
+* ...
 
 # 日志记录与使用情况跟踪
-
+* ...
 
 # 相关资料
 * 书籍地址：图灵社区(http://www.ituring.com.cn/book/844)
 * PDF下载：百度云网盘(http://pan.baidu.com/s/1eSDU6f4)
 * 文章阅读：
-1、用大数据来节能(http://www.ituring.com.cn/article/47695)
-2、史上最“脑残”的“抢火车票”程序(http://www.cnblogs.com/hongrunhui/p/6284192.html)
-3、Https&Http2.0&HttpDNS的那些事(http://fucknmb.com/2017/01/17/Https&Http2.0&HttpDNS%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/)
-4、一步步教你HTTPS抓包(https://gold.xitu.io/post/584b711d8e450a006c586ca6)
+1. 用大数据来节能(http://www.ituring.com.cn/article/47695)
+2. 史上最“脑残”的“抢火车票”程序(http://www.cnblogs.com/hongrunhui/p/6284192.html)
+3. Https&Http2.0&HttpDNS的那些事(http://fucknmb.com/2017/01/17/Https&Http2.0&HttpDNS%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/)
+4. 一步步教你HTTPS抓包(https://gold.xitu.io/post/584b711d8e450a006c586ca6)
 
 
 
