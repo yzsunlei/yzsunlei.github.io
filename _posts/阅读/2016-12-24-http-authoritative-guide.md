@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HTTP权威指南阅读笔记
-category: read
+title: HTTP权威指南笔记
+category: 阅读
 tag: http
 readtime: 15
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript中history和hash使用小结
-category: program
+category: 编程
 tag: Javascript hash
 readtime: 5
 ---
@@ -13,12 +13,12 @@ readtime: 5
 # 解决方法
 HTML5中提供了两种技术进行解决，简要列一下:
 1. hash
-   * window.location.hash `(存, 取`)
-   * onhashchange `(监听事件`)
+   * window.location.hash (存, 取)
+   * onhashchange (监听事件)
 2. pushstate
-   * history.pushstate`({}, '标题', 'xxx.html'`) `(存, 取`)
-   * history.replacestate`(null, '标题', 'xxx.html'`) `(改`)
-   * onpopstate `(监听事件`)
+   * history.pushstate({}, '标题', 'xxx.html') (存, 取)
+   * history.replacestate(null, '标题', 'xxx.html') (改)
+   * onpopstate (监听事件)
 
 # 原理介绍
 * hash是通过链接#号后面的参数来记录当前页面的状态, 当改变链接#号后面的数据时页面是不会刷新的;
@@ -34,12 +34,12 @@ HTML5中提供了两种技术进行解决，简要列一下:
 
 HTML5有两种解决办法
 1. hash
-   * window.location.hash `(存, 取`)
-   * onhashchange `(监听事件`)
+   * window.location.hash (存, 取)
+   * onhashchange (监听事件)
 2. pushstate
-   * history.pushstate`({}, '标题', 'xxx.html'`) `(存, 取`)
-   * history.replacestate`(null, '标题', 'xxx.html'`) `(改`)
-   * onpopstate `(监听事件`)
+   * history.pushstate({}, '标题', 'xxx.html') (存, 取)
+   * history.replacestate(null, '标题', 'xxx.html') (改)
+   * onpopstate (监听事件)
 
 * 点击一个站内的链接时, 不是做页面跳转, 而只是站内页面刷新
 * ajax刷新是支持浏览器历史的, 刷新页面的同时, 浏览器地址栏上面的地址也是会更改, 用浏览器的回退功能也能够回退到上一个页面
