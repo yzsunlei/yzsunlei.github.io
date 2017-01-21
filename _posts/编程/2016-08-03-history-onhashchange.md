@@ -3,7 +3,7 @@ layout: post
 title: JavaScript中history和hash使用小结
 category: 编程
 tag: Javascript hash
-exception: 
+exception: JavaScript中history和hash使用原理：hash是通过链接#号后面的参数来记录当前页面的状态, 当改变链接#号后面的数据时页面是不会刷新的；pushstate是通过管理浏览器的历史记录来实现的，即将所需的页面状态动态的插入到浏览记录中而页面不刷新；
 readtime: 5
 ---
 

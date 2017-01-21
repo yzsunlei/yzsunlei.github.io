@@ -3,7 +3,7 @@ layout: post
 title: Vue2.0教程笔记
 category: 阅读
 tag: vue
-exception: 
+exception: Vue.js是一套构建用户界面的渐进式框架，采用自底向上增量开发的设计。Vue的核心库只关注视图层，非常容易去学习，另外，vue完全有能力驱动采用单文件组件和vue生态系统支持的库开发的复杂单页应用。
 readtime: 10
 ---
 
