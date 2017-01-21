@@ -14,7 +14,7 @@ title: Home
             </h1>
             <div class="post-meta">
                 <span class="post-time">
-                    发表于 {{ post.date | YYYY-MM-DD}}
+                    发表于 {{ post.date | date: "%Y-%m-%d"}}
                 </span>
                 <span class="post-category">
                     &nbsp; | &nbsp; 分类于
