@@ -152,8 +152,8 @@ readtime: 15
 * ...
 
 # 相关资料
-* 书籍地址：图灵社区(http://www.ituring.com.cn/book/844)
-* PDF下载：百度云网盘(http://pan.baidu.com/s/1eSDU6f4)
+* 书籍地址：[图灵社区](http://www.ituring.com.cn/book/844)
+* PDF下载：[百度云网盘](http://pan.baidu.com/s/1eSDU6f4)
 * 文章阅读：
 1. [用大数据来节能](http://www.ituring.com.cn/article/47695)
 2. [史上最“脑残”的“抢火车票”程序](http://www.cnblogs.com/hongrunhui/p/6284192.html)
