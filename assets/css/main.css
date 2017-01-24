@@ -2154,3 +2154,13 @@ ul li {
   width: auto;
   margin: 0;
 }
+h1.page-title {
+  font-size: 30px;
+}
+h1.page-title .page-date {
+  font-size: 16px;
+  margin-left: 20px;
+}
+.page-desc {
+  text-indent:2em;
+}
