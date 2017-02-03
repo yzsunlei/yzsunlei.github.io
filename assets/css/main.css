@@ -2154,12 +2154,13 @@ ul li {
   width: auto;
   margin: 0;
 }
-h1.page-title {
+.page-title {
   font-size: 30px;
+  text-align: center;
 }
-h1.page-title .page-date {
+.page-info {
   font-size: 16px;
-  margin-left: 20px;
+  text-align: center;
 }
 .page-desc {
   text-indent:2em;
