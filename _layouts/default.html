@@ -12,7 +12,7 @@
 <meta name="keywords" content="Hexo,next" />
 <link rel="alternate" href="/rss2.xml" title="孙磊的官方博客" type="application/atom+xml" />
 <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
-<title> 孙磊的官方博客 </title>
+<title> {{ page.title | append: ' - ' }}孙磊的官方博客 </title>
 </head>
 <body>
 <div class="container one-column page-home">
@@ -20,9 +20,7 @@
     <div id="main" class="main">
         <div class="main-inner">
             <div id="content" class="content">
-
             {{ content }}
-
             </div>
         </div>
 
