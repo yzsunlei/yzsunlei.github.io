@@ -9,12 +9,12 @@ readtime: 5
 
 ## props绑定
 * 最常用的props属性绑定，不仅能实现父组件向子组件的传递数据，也能实现子组件向父组件传递数据的双向绑定。
-```
+{% highlight bash lineno %}
 <children :msg="将数据传递到子组件"></children> //简单的值传递
 <children :msg="parentMsg"></children> //动态值传递
 <children :msg.once="parentMsg"></children> //只传递一次，当parentMsg变化时，不会再次传递
 <children :msg.sync="parentMsg"></children> //双向绑定，父组件中的parentMsg变化时，子组件中的msg会随之变化，同样，子组件中的msg变化，父组件中的parentMsg值也会随之变化
-```
+{% endhighlight %}
 ## 自定义事件
 * 使用$on()在它上面监听事件
 * 使用$emit()在它上面触发事件
