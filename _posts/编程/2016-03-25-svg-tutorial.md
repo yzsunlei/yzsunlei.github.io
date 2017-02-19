@@ -37,26 +37,26 @@ readtime: 15
 * 动画：包含各种动画元素的定义
 
 ## SVG的框架元素
-* <svg>必不可少的元素,svg文档是以<svg>定义开始的,首先定义一个矩形可渲染区域
+* `<svg>`必不可少的元素,svg文档是以`<svg>`定义开始的,首先定义一个矩形可渲染区域
 * svg元素的几个基本属性: xmlns(XML通用属性)、x、y、width、height
-* <g>元素将一批特征类似的元素定义成一个集合
-* <desc>与<title>元素相当于SVG文档中的注释,使用纯文本来描述图像的大概内容
-* W3C组织推荐把需要被其他元素引用的元素置于<defs>元素中进行定义
-* <use>元素通常用来引用SVG中已经定义好的可视化元素
-* <symbol>元素用来定义图像的模板,有利于实现图像元素的重用
-* <image>将一个完整的点阵图像文件渲染到当前用户坐标系指定矩形区域，格式可以为png,jpeg,或另一个svg
+* `<g>`元素将一批特征类似的元素定义成一个集合
+* `<desc>`与`<title>`元素相当于SVG文档中的注释,使用纯文本来描述图像的大概内容
+* W3C组织推荐把需要被其他元素引用的元素置于`<defs>`元素中进行定义
+* `<use>`元素通常用来引用SVG中已经定义好的可视化元素
+* `<symbol>`元素用来定义图像的模板,有利于实现图像元素的重用
+* `<image>`将一个完整的点阵图像文件渲染到当前用户坐标系指定矩形区域，格式可以为png,jpeg,或另一个svg
 * 以上元素的公共属性: id, externalResourceRequired, xml:lang,xml:space
-* <switch>元素只在需要进行跨平台,跨语种的图像交流,或在文档中插入其他非SVG格式的数据时才使用
+* `<switch>`元素只在需要进行跨平台,跨语种的图像交流,或在文档中插入其他非SVG格式的数据时才使用
 
 ## SVG的基本形状元素
 * SVG有6种基本元素:矩形、圆形、椭圆、线段、折线、多边形等
-* 从数学上讲,这些元素与<path>路径元素所描述的形状在本质上是一样的
-* <rect>元素定义一个矩形,常用属性定义:x, y, width, height, rx, ry
-* <circle>元素使用圆心坐标值和半径值画圆,属性:cx, cy, r
-* <ellipse>元素定义一个长短轴平行于用户用户坐标系XY轴方向的椭圆，椭圆使用中心坐标和长短轴长度来描述,常用属性: cx, cy, rx ,ry
-* <line>定义一条线段,常用属性:x1, y1, x2, y2
-* <polyline>定义折线,也就是一批线段首尾相连而成的一组线条，一般用来绘制开放的非封闭图形
+* 从数学上讲,这些元素与`<path>`路径元素所描述的形状在本质上是一样的
+* `<rect>`元素定义一个矩形,常用属性定义:x, y, width, height, rx, ry
+* `<circle>`元素使用圆心坐标值和半径值画圆,属性:cx, cy, r
+* `<ellipse>`元素定义一个长短轴平行于用户用户坐标系XY轴方向的椭圆，椭圆使用中心坐标和长短轴长度来描述,常用属性: cx, cy, rx ,ry
+* `<line>`定义一条线段,常用属性:x1, y1, x2, y2
+* `<polyline>`定义折线,也就是一批线段首尾相连而成的一组线条，一般用来绘制开放的非封闭图形
 
 ## 资料参考
-* svg教程：[http://www.w3school.com.cn/svg/index.asp(http://www.w3school.com.cn/svg/index.asp)]
-* 五款超实用的开源SVG工具：[http://www.csdn.net/article/2013-04-15/2814880-open-source-svg-tools(http://www.csdn.net/article/2013-04-15/2814880-open-source-svg-tools)]
+* [svg教程：http://www.w3school.com.cn/svg/index.asp](http://www.w3school.com.cn/svg/index.asp)
+* [五款超实用的开源SVG工具：http://www.csdn.net/article/2013-04-15/2814880-open-source-svg-tools](http://www.csdn.net/article/2013-04-15/2814880-open-source-svg-tools)
