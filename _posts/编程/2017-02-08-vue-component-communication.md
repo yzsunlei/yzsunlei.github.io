@@ -3,27 +3,25 @@ layout: post
 title: Vue组件通信方式总结
 category: 编程
 tag: vue
-exception: 组件之间通信主要分为三种：父组件向子组件传递数据，子组件向父组件传递数据，兄弟组件之间的数据传递..
+exception: 现在在做vue构建的项目时候，我们都知道要灵活使用vue的组件特性，将公用的代码提取出来，放在组件中，以提高代码的复用率。但组件与组件之间需要传递数据时，如果没有弄清vue组件通信的方法，就显得很吃力了。最近我总结了下这方面的知识，下面归类分享一下..
 readtime: 5
 ---
 
-* 现在在做vue构建的项目时候，我们都知道要灵活使用vue的组件特性，将公用的代码提取出来，放在组件中，以提高代码的复用率。但组件与组件之间需要传递数据时，
-如果没有弄清vue组件通信的方法，就显得很吃力了。最近我总结了下这方面的知识，下面归类分享一下：
 ## props绑定
 * 最常用的props属性绑定，不仅能实现父组件向子组件的传递数据，也能实现子组件向父组件传递数据的双向绑定。
-```
+{% highlight bash lineno %}
 <children :msg="将数据传递到子组件"></children> //简单的值传递
 <children :msg="parentMsg"></children> //动态值传递
 <children :msg.once="parentMsg"></children> //只传递一次，当parentMsg变化时，不会再次传递
 <children :msg.sync="parentMsg"></children> //双向绑定，父组件中的parentMsg变化时，子组件中的msg会随之变化，同样，子组件中的msg变化，父组件中的parentMsg值也会随之变化
-```
+{% endhighlight %}
 ## 自定义事件
 * 使用$on()在它上面监听事件
 * 使用$emit()在它上面触发事件
 * 使用$dispatch()派发事件，事件沿着父链冒泡
 * 使用$broadcast()广播事件，事件向下传导给所有的后代
 * 派发事件实例如下：
-```
+{% highlight bash lineno %}
 <!-- 子组件模板 -->
 <template id="child-template">
   <input v-model="msg">
@@ -66,11 +64,11 @@ var parent = new Vue({
     }
   }
 })
-```
+{% endhighlight %}
 * 以上实例，当按钮被点击时，会执行notify方法，notify方法中会携带msg变量的值触发自定义事件child-msg，并沿着父链传递，父组件中定义了child-msg事件，此时，该事件触发函数执行将msg的值加入messages数组
 
 * 广播事件实例如下：
-```
+{% highlight bash lineno %}
 <!-- 父组件代码(parent.vue) -->
 <template>
 <div id="app">
@@ -109,7 +107,7 @@ export default {
 	}
 }
 </script>
-```
+{% endhighlight %}
 * 以上实例中，当父组件按enter触发addNew方法后，addNew方法会广播onAddnew自定义事件，并携带items变量，这时事件会通知到当前实例的全部后代，当子组件1和子组件2收到onAddnew事件，就会触发对应的函数，输出收到的变量值
 
 ## 通过实例来访问
@@ -118,7 +116,7 @@ export default {
 ## 子组件索引
 * 在父组件上通过v-ref注册一个子组件的索引，就可以直接方便的访问子组件的数据
 * 实例代码如下：
-```
+{% highlight bash lineno %}
 <template>
 <div id="parent">
     <child v-ref:child03></child>
@@ -143,7 +141,7 @@ export default {
     })
 }
 </script>
-```
+{% endhighlight %}
 * 以上代码就可以直接获取child03组件和child04组件对象
 
 ## 总结一下
