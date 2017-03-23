@@ -3,7 +3,7 @@ layout: post
 title: 常用mysql整理
 category: 编程
 tag: mysql
-exception: 常用mysql整理
+exception: 花了点时间整理下常用mysql语句，后面不记得命令时就可以过来翻一翻...
 readtime: 20
 ---
 
