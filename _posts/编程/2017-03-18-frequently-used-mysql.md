@@ -18,9 +18,15 @@ exit;
 # 用户操作
 ```$xslt
 // 添加新用户 
-grant select,update,delete,insert on <数据库>.<表名> to <用户名>@<登录主机> identified by "<密码>"
+grant select,update,delete,insert on <数据库>.<表名> to <用户名>@<登录主机> identified by "<密码>";
 // 修改用户密码
-mysqladmin -u <用户名> -p <旧密码> password <新密码>
+mysqladmin -u <用户名> -p <旧密码> password <新密码>;
+// 查看所有用户
+select distinct user, host from mysql.user;
+// 查看某个用户的权限
+show grants for '<用户名>'@'localhost';
+// 删除用户及权限
+drop user <用户名>@'localhost'
 ```
 
 # 数据库操作
@@ -89,7 +95,18 @@ update <表名> set <字段名> = <值> where <条件表达式>;
 
 # 高级查找操作
 ```$xslt
-待续...
+// 批量查询数据
+select * from <表名> where <字段名> in (值1, 值2, 值3);
+// concat连接查询结果
+select concat(<字段名1>, "-", <字段名2>) as <字段别名> from <表名> where <条件表达式>;
+// 使用group by
+select * from <表名> group by <字段名>;
+// 使用having
+// 先按city归组，然后找出city的数量大于10的城市
+select city, count(*), min(birth_day) from customer  group by city having count(*) > 10;
+// 使用distinct
+// 从customer表中查询所有的不重复的city
+select distinct city from customer order by id desc;
 ```
 
 # 备份数据操作
