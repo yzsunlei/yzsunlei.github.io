@@ -8,7 +8,7 @@ title: Home
     <div class="post post-type-normal ">
         <div class="post-header">
             <h1 class="post-title">
-                <a class="post-title-link" href="{{ post.url }}">
+                <a class="post-title-link" href="{{ post.url }}" target="_blank">
                     {{ post.title }}
                 </a>
             </h1>
@@ -18,7 +18,7 @@ title: Home
                 </span>
                 <span class="post-category">
                     &nbsp; | &nbsp; 分类于
-                    <a href="/categories/{{ post.category }}/">{{ post.category }}</a>
+                    <a href="/categories/{{ post.category }}/" target="_blank">{{ post.category }}</a>
                 </span>
                 <span class="post-comments-count" style="display: none">
                     <a href="{{ post.url }}#comments" >
@@ -33,7 +33,7 @@ title: Home
                 {{ post.exception }}
             </p>
             <div class="post-more-link text-center">
-                <a class="btn" href="{{ post.url }}#more">
+                <a class="btn" href="{{ post.url }}#more" target="_blank">
                     阅读全文 &raquo;
                 </a>
             </div>
