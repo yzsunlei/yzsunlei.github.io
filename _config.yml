@@ -5,4 +5,4 @@ description: '孙磊的官方博客'
 baseurl: "/yzsunlei"
 url: 'http://yzsunlei.github.io'
 logo: '/assets/images/logo.png'
-safe: false
+permalink: /:year/:month/:day/:title
