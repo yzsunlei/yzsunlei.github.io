@@ -32,3 +32,19 @@ function isMist () {
     //return CONFIG.scheme === 'Mist';
     return true;
 }
+
+function getUrlParamValue() {
+    var queryObj = {};
+    var queryStr = location.search.substr(1);
+
+    if (queryStr && queryStr.length) {
+        var queryArr = queryStr.split('&');
+        var key, value;
+        queryArr.forEach(function(item) {
+            key = item.split('=')[0];
+            value = item.split('=')[1] !== 'false' ? decodeURI(item.split('=')[1]) : false;
+            queryObj[key] = value;
+        });
+    }
+    return queryObj;
+}
