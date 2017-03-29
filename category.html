@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Category
+title: 分类
 ---
 
 <script type="text/javascript" src="/assets/js/helpers.js?v=0.4.3"></script>
@@ -8,10 +8,7 @@ title: Category
 var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
 var data = JSON.parse(dataStr);
 var curTag = getUrlParamValue();
-var archieves = data;
-console.log(curTag);
-console.log(archieves);
-console.log(archieves[curTag["name"]]);
+var archieves = data[curTag["name"]];
 </script>
 
 {% for post in archieves %}

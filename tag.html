@@ -1,9 +1,17 @@
 ---
 layout: default
-title: Category
+title: 标签
 ---
 
-{% for post in site.categories.[page.category] %}
+<script type="text/javascript" src="/assets/js/helpers.js?v=0.4.3"></script>
+<script type="text/javascript">
+    var dataStr = '{ {% for cat in site.tags %}{% if cat[0] != site.tags.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
+    var data = JSON.parse(dataStr);
+    var curTag = getUrlParamValue();
+    var archieves = data[curTag["name"]];
+</script>
+
+{% for post in archieves %}
 <div id="posts" class="posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
