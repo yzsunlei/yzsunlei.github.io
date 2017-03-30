@@ -19,11 +19,6 @@ title: 分类
 
 <script type="text/template" id="category-tpl">
 {@each posts as post}
-<a class="post-title-link" href="${post.url}" target="_blank">
-    ${post.title}
-</a>
-{/@each}
-</script>
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
@@ -66,3 +61,5 @@ title: 分类
         </div>
     </div>
 </div>
+{@/each}
+</script>
