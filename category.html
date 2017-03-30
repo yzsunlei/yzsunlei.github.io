@@ -12,8 +12,8 @@ title: 分类
         var data = JSON.parse(dataStr);
         var curTag = getUrlParamValue();
         console.log($('#category-tpl').html());
-        console.log({list: data[curTag["name"]]});
-        juicer($('#category-tpl').html(), {list: data[curTag["name"]]});
+        console.log(data[curTag["name"]]);
+        juicer($('#category-tpl').html(), data[curTag["name"]]);
     });
 </script>
 
