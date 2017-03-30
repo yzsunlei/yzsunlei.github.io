@@ -11,6 +11,8 @@ title: 分类
     var data = JSON.parse(dataStr);
     var curTag = getUrlParamValue();
     var archieves = data[curTag["name"]];
+    console.log($('#J_category-tpl').html());
+    console.log(archieves);
     juicer($('#J_category-tpl').html(), archieves);
 </script>
 
