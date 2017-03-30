@@ -10,9 +10,10 @@ title: 分类
     var data = JSON.parse(dataStr);
     var curTag = getUrlParamValue();
     var archieves = data[curTag["name"]];
+    juicer($('#J_category-tpl').html(), archieves);
 </script>
 
-{% for post in archieves %}
+<template id="J_category-tpl">
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
@@ -58,4 +59,4 @@ title: 分类
         </div>
     </div>
 </div>
-{% endfor %}
+</template>

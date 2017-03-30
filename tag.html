@@ -9,10 +9,8 @@ title: 标签
     var data = JSON.parse(dataStr);
     var curTag = getUrlParamValue();
     var archieves = data[curTag["name"]];
-    juicer($('#category-tpl').html(), archieves);
 </script>
 
-<template id="category-tpl">
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
@@ -58,5 +56,3 @@ title: 标签
         </div>
     </div>
 </div>
-{% endfor %}
-</template>
