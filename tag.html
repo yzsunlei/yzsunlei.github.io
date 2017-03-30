@@ -6,54 +6,58 @@ title: 标签
 <script type="text/javascript" src="/assets/vendors/jquery/index.js?v=2.1.3"></script>
 <script type="text/javascript" src="/assets/js/helpers.js?v=0.4.3"></script>
 <script type="text/javascript">
-    var dataStr = '{ {% for cat in site.tags %}{% if cat[0] != site.tags.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
-    var data = JSON.parse(dataStr);
-    var curTag = getUrlParamValue();
-    var archieves = data[curTag["name"]];
+    $(document).ready(function() {
+        var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}.html", "title":"{{post.title}}", "category":"{{post.category}}", "tag":"{{post.tag}}", "readtime":"{{post.readtime}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
+        var data = JSON.parse(dataStr);
+        var curTag = getUrlParamValue();
+        $('#content').html(juicer($('#tag-tpl').html(), {posts: data[curTag["name"]]}));
+    });
 </script>
 
-<div class="posts posts-expand">
-    <div class="post post-type-normal ">
-        <div class="post-header">
-            <h1 class="post-title">
-                <a class="post-title-link" href="{{ post.url }}">
-                    {{ post.title }}
-                </a>
-            </h1>
-            <div class="post-meta">
-                    <span class="post-time">
-                        发表于 {{ post.date }}
-                    </span>
-                <span class="post-category">
-                        &nbsp; | &nbsp; 分类于
-                        <a href="/categories/{{ post.category }}/">{{ post.category }}</a>
-                    </span>
-                <span class="post-comments-count" style="display:none">
-                        &nbsp; | &nbsp;
-                        <a href="{{ post.url }}#comments" >
-                        <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.url }}"></span>
-                        </a>
-                    </span>
+<script type="text/template" id="tag-tpl">
+    {@each posts as post}
+    <div class="posts posts-expand">
+        <div class="post post-type-normal ">
+            <div class="post-header">
+                <h1 class="post-title">
+                    <a class="post-title-link" href="${post.url}" target="_blank">
+                        ${post.title}
+                    </a>
+                </h1>
+                <div class="post-meta">
+                <span class="post-time">
+                    写于 ${post.date}
+                </span>
+                    <span class="post-category">
+                    &nbsp; | &nbsp; 分类于
+                    <a href="/categories/${post.category}/" target="_blank">${post.category}</a>
+                </span>
+                    <span class="post-comments-count" style="display: none">
+                    <a href="${post.url}" >
+                    <span class="post-comments-count ds-thread-count" data-thread-key="${post.url}"></span>
+                    </a>
+                </span>
+                </div>
             </div>
-        </div>
-        <div class="post-body">
-            <p><em>涉及知识：{{ post.tag }}</em><br><em>建议阅读：{{ post.readtime }}分钟</em></p>
-            <p>
-                {{ post.exception }}
-            </p>
-            <div class="post-more-link text-center">
-                <a class="btn" href="{{ post.url }}#more">
-                    阅读全文 &raquo;
-                </a>
+            <div class="post-body">
+                <p><em>涉及知识：${post.tag}</em><br><em>建议阅读：${post.readtime}分钟</em></p>
+                <p>
+                    ${post.exception}
+                </p>
+                <div class="post-more-link text-center">
+                    <a class="btn" href="${post.url}" target="_blank">
+                        阅读全文 &raquo;
+                    </a>
+                </div>
+                <p>
+                    作者：<a href="http://yzsunlei.github.io/about">孙磊</a>&emsp;博客：<a href="http://www.yzsunlei.com">http://www.yzsunlei.com</a><br>
+                </p>
             </div>
-            <hr>
-            <p>
-                作者：<a href="http://yzsunlei.github.io/about">孙磊</a>&emsp;博客：<a href="http://yzsunlei.github.io">http://yzsunlei.github.io</a><br>
-                <b><a href="https://github.com/yzsunlei">关注我</a>，咱们一起来改变世界吧<b>
-            </p>
-        </div>
-        <div class="post-footer">
-            <div class="post-eof"></div>
+            <div class="post-footer">
+                <div class="post-eof"></div>
+            </div>
         </div>
     </div>
-</div>
+    <hr>
+    {@/each}
+</script>
