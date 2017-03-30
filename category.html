@@ -8,7 +8,7 @@ title: 分类
 <script type="text/javascript" src="/assets/js/juicer-min.js?v=0.6.8"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        var cateStr = '[ {% for cat in site.categories %}"{{ cat[0] }}", {% endfor %} ]';
+        var cateStr = '[ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}"{% endfor %} ]';
         var postStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}.html", "title":"{{post.title}}", "category":"{{post.category}}", "tag":"{{post.tag}}", "exception": "{{post.exception}}", "readtime":"{{post.readtime}}", "date":"{{post.date | date:"%Y-%m-%d"}}"}{% endfor %}]{% endfor %} }';
         var cateData = JSON.parse(cateStr);
         var postData = JSON.parse(postStr);
