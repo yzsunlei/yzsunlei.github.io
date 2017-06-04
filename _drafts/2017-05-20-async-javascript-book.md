@@ -8,13 +8,33 @@ readtime: 15
 ---
 
 # 深入理解javascript事件
-
+* Javascript事件处理器在线程空闲之前不会运行
+* 异步函数通常可以分为I/O函数和计时函数
+* 现代浏览器中操作DOM对象时，从脚本角度看，更改是即时生效的，但从视效角度看，在返回事件队列之前不会渲染这些DOM对象更改
+* setInterval触发频率大约为200次/秒，在node环境，大约能达到1000次/秒；while触发频率为400万次/秒，在node环境，会达到500万次/秒
+* HTML规范推行的延时/间隔的最小值是4毫秒
+* setTimeout和setInterval就是不精确的计时工具
+* 要想产生短时延时，Node中process.nextTick,浏览器中，尝试垫片技术(shim)：支持requestAnimationFrame就用它，不支持就用setTimeout
+* 利用try/catch语句块并不能捕获从异步回调中抛出的错误
+* 只能在回调内部处理源自回调的异步错误
+* 如果windows.onerror处理器返回true，则能阻止浏览器的默认错误处理行为
+* 在Node环境中，window.onerror的类似物是process对象的uncaughtException事件(自Node 0.8.4起，该事件就被废弃了)
+* Domain对象是事件化对象，它将throw转化为'error'事件，请仅在调试时才使用它
+* npm的开发负责人就主张try/catch是一种“反模式”的方式，它只是包装着漂亮花括号的goto语句
+* JavaScript中最常见的反模式的做法是，回调内部在嵌套回调
 
 # 分布式事件
-
+* PubSub（发布/订阅）模式来分发事件，具体表现：Node的EventEmitter对象，Backbone的事件话模型和jQuery的自定义事件
+* jQuery的名称空间化事件(如绑定"click.tbb"和"hover.tbb"两个事件)，backbone.js允许向"all"事件类型绑定事件处理器，这样不管发生什么事，都会导致这些事件处理器的触发
+* 老式的JavaScript依靠输入事件的处理器直接改变DOM，新式的JavaScript先改变模型，接着由模型出发事件而导致DOM的更新
+* JavaScript确实没有一种每当对象变化时就触发事件的机制？Object.observe的ECMAScript提案已经获得广泛的接纳
+* backbone中的两道保险：当新值等于旧值时，set方法不会导致触发change事件；模型正处于自身的change事件期间时，不会再去出发change事件(自保哲学)
+* 事件化模型为我们带来一种将应用状态转换为事件的直观方式，运用事件化模型存储互斥数据？
+* jQuery简化了强大分布式事件系统向任何web应用程序的移植，jQuery中可以使用trigger方法基于任意DOM元素触发任何想要的事件
 
 # Promise对象和Deferred对象
-
+* jQuery在用语上的不同之处，一是Deferred与Promise之间的区别，二是resolve用作reject的反义词
+* Deffered是Promise的超集，它比Promise多一项关键特性，可以直接触发
 
 # Async.js的工作流进程
 
