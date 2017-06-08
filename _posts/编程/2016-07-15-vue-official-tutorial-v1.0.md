@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue1.0教程笔记
-category: 阅读
+category: 编程
 tag: vue
 exception: Vue的目标是通过尽可能简单的API实现响应的数据绑定和组合的视图组件，Vue的核心是一个响应的数据绑定系统，它让数据与DOM保持同步非常简单。
 readtime: 10
