@@ -1,3 +1,12 @@
+---
+layout: post
+title: 深入浅出node.js
+category: 读书
+tag: node.js
+exception: 学习node.js必读书籍《深入浅出node.js》，以下是读书笔记
+readtime: 30
+---
+
 1、node.js的来源、发展做一个流程图
 2、优势：V8的高性能和异步I/O模型
 3、书籍结构：代码组织结构、运行结构、编程结构、内存结构、数据在I/O流中的结构或状态、网络服务角度、HTTP上的展现、单机集群结构、单元测试和性能测试、NODE编码产品化
@@ -101,4 +110,3 @@
 94、编码规范的两种方式：一种是文档式的约定，一种是代码提交时的强制检查
 
 95、Node调试工具：Debugger、Node Inspector
-96、
