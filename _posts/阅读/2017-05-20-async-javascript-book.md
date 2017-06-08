@@ -1,9 +1,9 @@
 ---
 layout: post
 title: JavaScript异步编程
-category: 编程
+category: 阅读
 tag: JavaScript
-exception: 描述
+exception: JavaScript异步编程一书，深入讲解了JavaScript事件、Promise对象和Deferred对象、worker对象等常用但又让人陌生的知识，感觉受益匪浅
 readtime: 15
 ---
 
@@ -37,7 +37,8 @@ readtime: 15
 * Deffered是Promise的超集，它比Promise多一项关键特性，可以直接触发
 
 # Async.js的工作流进程
-
+* 为node.js设计的，直接而强大的JavaScript异步功能
+* 函数map、reduce、filter、forEach等，异步流程控制模式：parallel、series、waterfall等
 
 # worker对象的多线程技术
 * 事件能够代替一种特殊的多线程(或者通过中断技术虚拟实现，或者通过多个CPU内核真正实现)
