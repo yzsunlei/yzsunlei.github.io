@@ -1,7 +1,11 @@
-# python核心编程（第二版）
-* Author: Ray Sun
-* Date:2016/10/26
-* 书籍地址：https://book.douban.com/subject/3112503/
+---
+layout: post
+title: 《python核心编程（第二版）》阅读笔记
+category: 阅读
+tag: python
+exception: 从基础到深入，逐步让你理解python语言的优美编程，python开发从业者不可缺少的一本桌边书...
+readtime: 15
+---
 
 # 1、python起步
 * Python的主提示符(`>>>`): 解释器告诉你她在等待你输入下一个语句
