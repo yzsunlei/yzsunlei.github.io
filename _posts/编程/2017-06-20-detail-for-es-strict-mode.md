@@ -29,8 +29,8 @@ var v = "hello";
 * 为某个函数开启严格模式
 ```javascript
 function strict() {
-  'use strict';
-  return "hello";
+    'use strict';
+    return "hello";
 }
 ```
 
@@ -49,12 +49,11 @@ delete Object.prototype; // 抛出TypeError错误
 * 禁止设置primitive值得属性
 ```javascript
 (function() {
-"use strict";
-
-false.true = "";              //TypeError
-(14).sailing = "home";        //TypeError
-"with".you = "far away";      //TypeError
-
+    "use strict";
+    
+    false.true = "";              //TypeError
+    (14).sailing = "home";        //TypeError
+    "with".you = "far away";      //TypeError
 })();
 ```
 * 禁用with
@@ -77,9 +76,9 @@ arguments++; // 语法错误
 * 参数的值不会随着arguments对象的值的改变而变化
 ```javascript
 function f(a){
-  "use strict";
-  a = 42;
-  return [a, arguments[0]];
+    "use strict";
+    a = 42;
+    return [a, arguments[0]];
 }
 ```
 * 不在支持arguments.callee和arguments.caller，他们是一个不可删除属性，而且赋值和读取时都会抛出异常
@@ -88,9 +87,9 @@ function f(a){
 ```javascript
 function restricted()
 {
-  "use strict";
-  restricted.caller;    // 抛出类型错误
-  restricted.arguments; // 抛出类型错误
+    "use strict";
+    restricted.caller;    // 抛出类型错误
+    restricted.arguments; // 抛出类型错误
 }
 ```
 * 严格模式下的arguments不会再提供访问与调用这个函数相关的变量的途径
@@ -99,8 +98,8 @@ function restricted()
 ```javascript
 "use strict";
 if (true){
-  function f() { } // !!! 语法错误
-  f();
+    function f() { } // !!! 语法错误
+    f();
 }
 ```
 
@@ -110,6 +109,6 @@ if (true){
 * 记得在支持或者不支持严格模式的浏览器中测试你的代码
 
 # 参考
-* [严格模式-JavaScript|MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+* [严格模式-JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 * [向严格模式过渡](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
 * [理解JavaScript中的严格模式](http://www.codesec.net/view/405985.html)
