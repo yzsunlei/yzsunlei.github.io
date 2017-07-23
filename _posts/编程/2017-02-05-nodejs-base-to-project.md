@@ -3,7 +3,7 @@ layout: post
 title: nodejs从入门到项目
 category: 编程
 tag: nodejs
-exception: ...
+exception: nodejs从入门到项目视频学习记录
 readtime: 20
 ---
 
