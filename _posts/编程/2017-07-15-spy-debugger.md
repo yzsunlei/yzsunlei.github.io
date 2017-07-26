@@ -61,9 +61,13 @@ spy-debugger -c true
 ```
 
 # 使用示例
+* 启动
 ![启动](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/20170726195806.png)
-![手机上操作](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/20170726200442.png)
+* 手机上操作
+![手机上操作](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/20170726200442.jpg)
+* 页面调试
 ![页面调试](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/20170726200340.png)
+* 请求抓包
 ![请求抓包](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/20170726200335.png)
 
 # 参考资料
