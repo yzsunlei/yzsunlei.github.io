@@ -3,7 +3,7 @@ layout: post
 title: 不固定宽高或者固定宽高的上下左右居中新方式
 category: 编程
 tag: css
-exception: 不固定宽高或者固定宽高的上下左右居中新方式
+exception: 
 readtime: 5
 ---
 
