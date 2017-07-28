@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Three.js入门指南
+title: 《Three.js入门指南》阅读记录
 category: 阅读
 tag: JavaScript, Three.js
 exception: Three.js，3D JavaScript库，提供了基于Canvas、SVG标签的渲染器。如何你对绚丽的数据可视化效果，精彩绝伦的游戏画面，逼真的VR视频虚拟体验有点兴趣，那么推荐你看看此书...
 readtime: 10
 ---
 
-# 概述()
+# 概述
 * WebGL是基于OpenGL ES2.0的Web标准，可以通过HTML5 Canvas元素作为DOM访问接口
 * Three.js：3D JavaScript库，封装了底层的图形接口，基于Canvas和SVG标签的渲染器，很简单的实现三维场景的渲染
 * 应用场景：酷炫的网页效果、精彩绝伦的游戏效果、绚丽的数据可视化效果
@@ -129,17 +129,93 @@ mesh.position = new THREE.Vector3(1.5, -0.5, 0);
 ````javascript
 setInterval(func, msec)
 ````
+* requestAnimationFrame 方法
+````javascript
+// 要注意requestAnimationFrame的兼容性问题
+function draw() {
+ mesh.rotation.y = (mesh.rotation.y + 0.01) % (Math.PI * 2);
+ renderer.render(scene, camera);
+ id = requestAnimationFrame(draw);
+}
+````
+* 对比：requestAnimationFrame适用于对于时间较为敏感的环境(但是动画逻辑更加复杂)；setInterval则可在保证程序的运算不至于导致延迟的情况下提供更加简洁的逻辑(无需自行处理时间)
+* 使用stat.js记录FPS
+```javascript
+// 在页面初始化的时候，对其初始化并将其添加至屏幕一角
+var stat = null;
+function init() {
+ stat = new Stats();
+ stat.domElement.style.position = 'absolute';
+ stat.domElement.style.right = '0px';
+ stat.domElement.style.top = '0px';
+ document.body.appendChild(stat.domElement);
+ // Three.js init ...
+}
+```
 
-# 外部模型()
+# 外部模型(Model)：允许用户导入由3ds Max等工具制作的三维模型
+* 使用前需要下载并导入一系列的外部文件的辅助函数
+* 目前支持的模型格式：`*.obj, *.mtl、*.dae、*.ctm、*.ply、*.stl、*.wrl、*.vtk`
+* 无材质的模型：
+```javascript
+<script type="text/javascript" src="OBJLoader.js"></script>
+<script>
+var loader = new THREE.OBJLoader();
+loader.load('../lib/port.obj', function(obj) {
+ mesh = obj; //储存到全局变量中
+ scene.add(obj);
+});
+</script>
+```
+* 有材质的模型：需要在回调函数中设置模型的材质
+```javascript
+<script type="text/javascript" src="MTLLoader.js"></script>
+<script type="text/javascript" src="OBJMTLLoader.js"></script>
+<script>
+var loader = new THREE.OBJMTLLoader();
+loader.addEventListener('load', function(event) {
+ var obj = event.content;
+ mesh = obj;
+ scene.add(obj);
+});
+loader.load('../lib/port.obj', '../lib/port.mtl');
+</script>
+```
 
+# 光与影(Lights)：很大程度上丰富了图像渲染的效果
+* 四种常见的光源：环境光、平行光、点光源、聚光灯
+* 环境光：场景整体的光照效果，若干光源多次反射，没有明确的光源位置
+```javascript
+var light = new THREE.AmbientLight(0xffffff);
+```
+* 点光源：补给光源大小，亮度线性递减
+* 平行光：
+```javascript
+THREE.DirectionalLight(hex, intensity)
+```
+* 聚光灯：能够朝一个方向折射光线
+```javascript
+THREE.SpotLight(hex, intensity, distance, angle, exponent)
+```
+* 阴影：明暗是相对的
+```javascript
+在Three.js中，能形成阴影的光源只有 THREE.DirectionalLight 与 THREE.SpotLight
+而相对地，能表现阴影效果的材质只有 THREE.LambertMaterial 与 THREE.PhongMaterial
+```
+```javascript
+对于光源以及所有要产生阴影的物体调用：
+xxx.castShadow = true;
+对于接收阴影的物体调用：
+xxx.receiveShadow = true;
+对于聚光灯，需要设置：
+shadowCameraNear 、 shadowCameraFar 、 shadowCameraFov 三个值
+对于平行光，需要设置：
+shadowCameraNear 、 shadowCameraFar 、 shadowCameraLeft 、shadowCameraRight 、 shadowCameraTop 以及 shadowCameraBottom 六个值
+```
 
-# 光与影(Lights)
-
-
-
-# 着色器()
-
-
+# 着色器(Shader)：可以对先前渲染的结果作修改
+* 屏幕上呈现页面的最后一步，用它可以对先前渲染的结果作修改，包括对颜色、位置等信息的修改，甚至对先前的结果做后处理，实现高级的渲染效果
+* 着色器通常分为几何着色器(Geometry Shader)、顶点着色器(Vertex Shader)、片元着色器(Fragment Shader)等
 
 # 参考资料
 * [《Three.js 入门指南》](http://www.ituring.com.cn/book/1272)

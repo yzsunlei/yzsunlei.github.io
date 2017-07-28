@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《JavaScript异步编程》阅读笔记
+title: 《JavaScript异步编程》阅读记录
 category: 阅读
 tag: JavaScript
 exception: JavaScript异步编程一书，深入讲解了JavaScript事件、Promise对象和Deferred对象、worker对象等常用但又让人陌生的知识，感觉受益匪浅

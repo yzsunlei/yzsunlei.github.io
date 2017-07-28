@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《python核心编程（第二版）》阅读笔记
+title: 《python核心编程（第二版）》阅读记录
 category: 阅读
 tag: python
 exception: 从基础到深入，逐步让你理解python语言的优美编程，python开发从业者不可缺少的一本桌边书...

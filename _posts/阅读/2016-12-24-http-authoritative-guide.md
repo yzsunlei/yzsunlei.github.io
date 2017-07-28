@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《HTTP权威指南》阅读笔记
+title: 《HTTP权威指南》阅读记录
 category: 阅读
 tag: http
 exception: Web浏览器、服务器和相关的Web应用程序都是通过HTTP相互通信的。HTTP是现代全球因特网中使用的公共语言。http权威指南是一本很经典的书，它不仅仅是一本HTTP首部额参考手册，也是一本名副其实的web结构圣经。

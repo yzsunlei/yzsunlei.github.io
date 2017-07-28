@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《深入浅出Node.js》阅读笔记
+title: 《深入浅出Node.js》阅读记录
 category: 阅读
 tag: node
 exception: 这本书从不同的视角讲解了node内在的特点和结构，从Node的代码组织结构、运行结构到编程结构、内存结构再到单元测试、工程化、产品化都有细致的讲解，非常值得Node.js初学者花时间去阅读

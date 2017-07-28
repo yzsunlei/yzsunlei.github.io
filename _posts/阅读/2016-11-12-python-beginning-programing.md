@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《Python基础教程(第二版)》学习笔记
+title: 《Python基础教程(第二版)》阅读记录
 category: 阅读
 tag: python
 exception: Python基础教程(第二版)，这本书讲的比较基础，适合python初学者，先从语法入门，循序渐进，最后附加了十几个实践项目，巩固基础
