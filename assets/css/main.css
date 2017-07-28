@@ -2165,3 +2165,9 @@ ul li {
 .page-desc {
   text-indent:2em;
 }
+.highlight {
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+}
