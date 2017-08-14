@@ -38,10 +38,10 @@ s.push("Cynthia");
 s.push("Raymond");
 s.push("Barbara");
 console.log("length:" + s.length());
-//console.log(this.peek());
+console.log(s.peek());
 var poped = s.pop();
 console.log("The poped element is: " + poped);
-//console.log(this.peek());
+console.log(s.peek());
 s.clear();
 console.log("length:" + s.length());
 
