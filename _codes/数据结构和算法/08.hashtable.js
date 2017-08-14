@@ -17,8 +17,7 @@ function put(key, data) {
    if (this.table[pos] == undefined) {
       this.table[pos] = key;
       this.values[pos] = data;
-   }
-   else {
+   } else {
       while (this.table[pos] != undefined) {
          pos++;
       }
@@ -151,3 +150,7 @@ for (var i = 0; i < someNames.length; ++i) {
    hTable.put(someNames[i]);
 }
 hTable.showDistro();
+
+// 更多实例
+// 开链法
+// 线性探测法

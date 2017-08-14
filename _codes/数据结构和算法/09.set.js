@@ -19,8 +19,7 @@ function add(data) {
    if (this.dataStore.indexOf(data) < 0) {
       this.dataStore.push(data);
       return true;
-   }
-   else {
+   } else {
       return false;
    }
 }
@@ -30,8 +29,7 @@ function remove(data) {
    if (pos > -1) {
       this.dataStore.splice(pos,1);
       return true;
-   }
-   else {
+   } else {
       return false;
    }
 }
@@ -47,8 +45,7 @@ function show() {
 function contains(data) {
    if (this.dataStore.indexOf(data) > -1) {
       return true;
-   }
-   else {
+   } else {
       return false;
    }
 }
@@ -79,8 +76,7 @@ function intersect(set) {
 function subset(set) {
    if (this.size() > set.size()) {
       return false;
-   }
-   else {
+   } else {
       for (var member in this.dataStore) {
          if (!set.contains(member)) {
             return false;
