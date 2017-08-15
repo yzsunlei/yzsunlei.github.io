@@ -1,7 +1,11 @@
-# jinja2学习笔记
-* Author： Ray Sun
-* Date：2016/12/10
-* Link： http://docs.jinkan.org/docs/jinja2/index.html
+---
+layout: post
+title: Python模板引擎jinja2学习笔记
+category: 编程
+tag: Python, Jinja2
+exception: 
+readtime: 16
+---
 
 # 特性：
 * 沙箱中执行
@@ -89,3 +93,6 @@
 * 交替的行：对一个表格或列表的每行使用不同的样式，可以使用loop对象的cycle方法，`<li class="{ loop.cycle('odd', 'even') }">{{ row }}</li>`
 * 高亮活动菜单项：在block外的声明在子模板中是全局的，并且在布局模板求值前执行，在子模板中定义活动的菜单项，`{% set active_page = "index" %}`
 * 访问父级循环：特殊的loop变量总是指向最里层的循环，在里层访问外层的循环，可以给它设置别名，`{% set rowloop = loop %}`
+
+# 参考资料
+* [http://docs.jinkan.org/docs/jinja2/index.html](http://docs.jinkan.org/docs/jinja2/index.html)
