@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random</title>
+  <script type="text/javascript">
+    // 将服务器端发送回的信息更新到文本框
+    function addMessage(counts) {
+      // 获取id为message的文本框
+      var messageElement = document.getElementById('message');
+      // 将新信息添加到文本框
+      messageElement.innerHTML += counts;
+    }
+    // 定时刷新iframe，获取最新数据
+    function f() {
+      if (true) {
+        var iframeElement = document.getElementById('iframe');
+        iframeElement.src = iframeElement.src;
+        setTimeout(f, 3*1000);
+      }
+    }
+    // 定时器初始化，实现每30秒调用一次函数f
+    setTimeout(f, 3*1000);
+  </script>
+</head>
+<body>
+<iframe id="iframe" src="01.iframe-chat.php" style="display: none;"></iframe>
+<div id="message" style="height:400px;width:100%;overflow:auto;"></div>
+</body>
+</html>

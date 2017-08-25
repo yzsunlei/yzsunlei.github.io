@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatRoom</title>
+  <script type="text/javascript">
+    // 将服务器端发送回的信息更新到文本框
+    function addMessage(message) {
+      // 获取id为message的文本框
+      var messageElement = document.getElementById('message');
+      // 将新信息添加到文本框
+      messageElement.innerHTML += message;
+      // 将id为input_message的文本框清空
+      document.getElementById('input_message').value = "";
+      // 将id为input_name的文本框清空
+      document.getElementById('input_name').value = "";
+    }
+    // 定时刷新iframe，获取最新数据
+    function iframeRefresh() {
+        var iframeElement = document.getElementById('iframeReceiveMessage');
+        iframeElement.src = iframeElement.src;
+    }
+  </script>
+</head>
+<body>
+<iframe name="iframeSendMessage" style="display: none;"></iframe>
+<iframe name="iframeReceiveMessage" style="display: none;" src="comet" onload="iframeRefresh()"></iframe>
+<div id="message" style="height:400px;width:100%;overflow:auto;"></div>
+<form target="iframeSendMessage" action="sendMessage" method="POST">
+  姓名：<input type="text" name="username" id="input_name"><br>
+  消息：<br>
+  <textarea rows="4" cols="30" name="message" id="input_message"></textarea><br>
+  <input type="submit" value="发送">
+</form>
+</body>
+</html>

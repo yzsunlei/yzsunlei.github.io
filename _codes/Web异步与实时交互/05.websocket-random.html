@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random</title>
+  <script type="text/javascript">
+    var ws = null;
+    // 设置按键
+    function setConnected(connected) {
+      document.getElementById('connect').disabled = connected;
+      document.getElementById('disconnect').disabled = !connected;
+      document.getElementById('echo').disabled = !connected;
+    }
+
+    // 开始建立连接
+    function connect() {
+      // 判断浏览器是否支持websocket
+      if ('WebSocket' in window) {
+        // 构造函数
+        ws = new WebSocket("ws://127.0.0.1:4000");
+      } else {
+        alert('您的浏览器不支持WebSocket，请选择高版本的浏览器');
+        return;
+      }
+      // 连接成功后触发onopen事件
+      ws.onopen = function () {
+        setConnected(true);
+      };
+      // 收到消息后触发onmessage事件
+      ws.onmessage = function (e) {
+        log("接收：" + e.data);
+      };
+      // 连接关闭时触发onclose事件
+      ws.onclose = function() {
+        setConnected(false);
+      };
+      // 连接失败后触发onmessage事件
+      ws.onerror = function (e) {
+        log("连接失败：" + JSON.stringify(e));
+      };
+    }
+    // 断开连接时
+    function disconnect() {
+      if (ws !=null) {
+        ws.close();
+        ws = null;
+      }
+      // 按钮发生变化
+      setConnected(false);
+    }
+    function echo() {
+      if (ws != null) {
+        var message = document.getElementById('message').value;
+        log("发送：" + message);
+        ws.send(message);
+      } else {
+        alert('WebSocket连接没有建立，请连接WebSocket')
+      }
+    }
+    function log(message) {
+      var console = document.getElementById('console');
+      var p = document.createElement('p');
+      p.style.wordWrap = 'break-word';
+      p.appendChild(document.createTextNode(message));
+      console.appendChild(p);
+      while(console.childNodes.length > 25) {
+        console.removeChild(console.firstChild);
+      }
+      console.scrollTop = console.scrollHeight;
+    }
+  </script>
+</head>
+<body>
+<p>WebSocket Demo</p>
+<input id="connect" type="button" value="连接" onclick="connect()" />
+<input id="disconnect" type="button" value="断开连接" onclick="disconnect()" disabled="disabled" />
+<br>
+<textarea id="message" style="width: 350px;"></textarea>
+<br>
+<input id="echo" type="button" onclick="echo()" value="发送" disabled="disabled" />
+<div id="console"></div>
+</body>
+</html>
