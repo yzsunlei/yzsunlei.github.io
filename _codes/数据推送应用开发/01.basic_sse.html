@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<pre id="x">Initializing...</pre>
+<script>
+  // node.js后端
+  // var es = new EventSource("http://127.0.0.1:1234");
+  // php后端
+  var es = new EventSource("01.basic_sse.php");
+  es.addEventListener("message", function (e) {
+    document.getElementById('x').innerHTML += "\n" + e.data;
+  }, false);
+</script>
+</body>
+</html>
