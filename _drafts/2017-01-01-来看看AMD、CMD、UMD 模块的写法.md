@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 来谈谈AMD、CMD、UMD 模块的写法
+title: 来看看AMD、CMD、UMD 模块的写法
 category: 编程
 tag: javascript
 exception: ...
