@@ -790,6 +790,7 @@ body {
 }
 .main-inner .content {
   width: 700px;
+  padding: 5px 10px;
 }
 .footer {
   position: absolute;
@@ -810,8 +811,8 @@ body {
   background: #222;
 }
 .header {
-  background: #4398ED;
-  color: #fff;
+  background: #4398ED !important;
+  color: #fff !important;
 }
 .header-inner {
   position: relative;
@@ -909,6 +910,7 @@ body {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  color: #fff;
 }
 .menu .menu-item a:hover {
   border-bottom-color: #222;
@@ -1914,7 +1916,7 @@ ul li {
 }
 .site-meta .brand {
   padding: 2px 1px;
-  color: #222;
+  color: #fff;
   background: none;
 }
 @media (max-width: 767px) {
@@ -1952,7 +1954,7 @@ ul li {
   position: relative;
   display: block;
   height: 2px;
-  background: #222;
+  background: #fff;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
@@ -2116,7 +2118,7 @@ ul li {
   transition-property: border;
 }
 .post-more-link a:hover {
-  border-bottom-color: #222;
+  border-bottom-color: #fff;
 }
 .page-post-detail .post-title,
 .page-post-detail .post-meta {
