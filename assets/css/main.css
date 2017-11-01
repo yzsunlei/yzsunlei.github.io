@@ -810,7 +810,8 @@ body {
   background: #222;
 }
 .header {
-  background: #fff;
+  background: #4398ED;
+  color: #fff;
 }
 .header-inner {
   position: relative;
@@ -900,7 +901,7 @@ body {
 }
 .menu .menu-item a {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   text-transform: capitalize;
   line-height: 1.5;
   border-bottom: 1px solid transparent;

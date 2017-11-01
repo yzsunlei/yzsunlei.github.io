@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+{% include css.html %}
+<meta name="description" content="{{ page.exception }} 编程、读书、思考、写教程，孙磊的官方博客" />
+<meta name="keywords" content="{{ page.title }}, 编程, 读书, 思考, 写教程" />
+<link rel="alternate" href="/rss2.xml" title="孙磊的官方博客" type="application/atom+xml" />
+<link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+<title> {{ page.title | append: ' - ' }}孙磊的官方博客 </title>
+</head>
+<body>
+<div class="container one-column page-home">
+    {% include header.html %}
+    <div id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+            {{ content }}
+            </div>
+        </div>
+
+        {% include sidebar.html %}
+        {% include footer.html %}
+    </div>
+    {% include js.html %}
+</body>
+</html>
