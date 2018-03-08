@@ -3,7 +3,7 @@ layout: post
 title: 怎样避免重复发送Ajax请求的总结
 category: 编程
 tag: Ajax
-exception: 描述
+exception: 在软件开发工作中，经常会遇到后台接口慢，用户在前台连续点击按钮请求数据导致系统问题的情况，今天一起总结整理一下如何处理重复发送Ajax请求的问题
 readtime: 12
 ---
 
