@@ -26,16 +26,16 @@ readtime: 6
 - 方案一：图片高斯模糊
 * 直接利用PS处理图片，使图片高斯模糊，调节参数可达到不同效果。
 * 同时可以结合透明度达到更加优质的效果，如参考网易云音乐播放器。
-![直接利用PS处理](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2015/asfdsaf1.jpg)
+![直接利用PS处理](https://yzsunlei.b0.upaiyun.com/2018/asfdsaf1.jpg)
 * 案例：[http://www.xuanfengge.com/demo/201410/blur/demo.html](http://www.xuanfengge.com/demo/201410/blur/demo.html)
-![网易云音乐播放器](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2015/sadsadas.jpg)
-![网易云音乐播放器](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2015/asfdsf.jpg)
-![网易云音乐播放器](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2015/sdfgvfsdg.jpg)
+![网易云音乐播放器](https://yzsunlei.b0.upaiyun.com/2018/sadsadas.jpg)
+![网易云音乐播放器](https://yzsunlei.b0.upaiyun.com/2018/asfdsf.jpg)
+![网易云音乐播放器](https://yzsunlei.b0.upaiyun.com/2018/sdfgvfsdg.jpg)
 
 - 方案二：使用CSS3 filter
 * CSS3 高斯模糊效果 “-webkit-filter:blur(2px)”。这个效果很赞，结合动画效果更佳。
 * 案例：[http://xuanfengge.com/demo/201410/blur/index.html](http://xuanfengge.com/demo/201410/blur/index.html)
-![高斯模糊效果](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2015/dsfdsgf.gif)
+![高斯模糊效果](https://yzsunlei.b0.upaiyun.com/2018/dsfdsgf.gif)
 ```css
 .bac_img{
     -webkit-filter:blur(0px);

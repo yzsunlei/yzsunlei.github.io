@@ -11,22 +11,22 @@ readtime: 5
 ```javascript
 python -m SimpleHTTPServer
 ```
-![使用python打开](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2017/20170806202557.png)
+![使用python打开](https://yzsunlei.b0.upaiyun.com/2018/20170806202557.png)
 
 # 用NPM--如果你安装了Node.js
 ```javascript
 npm install -g http-server
 http-server
 ```
-![安装http-server后打开](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2017/20170806202825.png)
+![安装http-server后打开](https://yzsunlei.b0.upaiyun.com/2018/20170806202825.png)
 
 # 用Mongoose--在Mac/Windows上可以移植
 ```javascript
 Windows平台，将下载好的文件复制到一个目录，双击启动就可以在浏览器上显示该目录中的内容
 其他平台，将下载好的文件复制到一个目录，通过命令行来启动就可以在浏览器上显示该目录中的内容
 ```
-![用Mongoose双击打开](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2017/20170806203813.png)
+![用Mongoose双击打开](https://yzsunlei.b0.upaiyun.com/2018/20170806203813.png)
 下载地址：[http://www.softpedia.com/dyn-postdownload.php/9a78fb1f806e2db40eac714569862ebf/59870ff8/24218/4/1](http://www.softpedia.com/dyn-postdownload.php/9a78fb1f806e2db40eac714569862ebf/59870ff8/24218/4/1)
 
 # 用webStorm、pycharm等编辑器--如果安装了的话
-![pycharm编辑器打开](https://raw.githubusercontent.com/yzsunlei/yzsunlei.github.io/master/_files/2017/20170806203258.png)
+![pycharm编辑器打开](https://yzsunlei.b0.upaiyun.com/2018/20170806203258.png)
