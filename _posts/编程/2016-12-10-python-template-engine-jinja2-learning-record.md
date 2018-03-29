@@ -3,11 +3,11 @@ layout: post
 title: Python模板引擎jinja2学习笔记
 category: 编程
 tag: Python, Jinja2
-exception: 
+exception: jinja2模版引擎学习记录，方便以后回来查阅
 readtime: 16
 ---
 
-# 特性：
+## 特性：
 * 沙箱中执行
 * 强大的`HTML`自动转义系统保护系统免受`XSS`
 * 模板继承
@@ -16,7 +16,7 @@ readtime: 16
 * 易于调试，异常的行数直接指向模板中的对应行
 * 可配置的语法
 
-# API：
+## API：
 * `Jinja2`使用一个名为`Environment`的中心对象，用这个类的实例存储配置、全局对象和从文件系统或其他位置加载模板
 * 配置`Jinja2`为你的应用加载文档
   `from jinja2 import Environment, PackageLoader`
@@ -38,11 +38,11 @@ readtime: 16
 * 底层API：低层API暴露的功能对理解一些实现细节、调试目的或高级扩展技巧是有用的（一般不推荐使用这些api）
 * 元API：返回一些关于抽象语法树的信息，这些信息能帮助应用实现更多的高级模板概念。所有的元api函数操作一个`Environment.parse()`方法返回抽象语法树
     
-# 沙箱
+## 沙箱
 * jinjia2沙箱用于为不信任的代码求值，访问不安全的属性和方法是被禁止的
 * `class jinja2.sandbox.SandboxedEnvironment`：沙箱环境，它工作就像有规则的环境会告诉编译器生成沙箱化的代码，另外这个环境的子类会覆盖一些方法来告诉运行环境什么函数是可以安全执行的
 
-# 模板文档
+## 模板文档
 * 分隔符：`{%...%}` 和`{{...}}`
 * 变量传递：`{{foo.bar}}`和`{{foo['bar']}}`
 * 过滤器：`{{name|striptags|title}}`(链式调用，前一个过滤器的输出作为后一个过滤器的输入)
@@ -78,21 +78,21 @@ readtime: 16
 * 其他运算符：`in`、`is`、`|`、`~`、`()`、`.`、`[]`，`is`和`in`运算符同样支持使用中缀记法`foo is not bar`和`foo not in bar`
 * if表达式：可以使用内联的if表达式`{% extend layout_template if layout_template is defined else 'master.html' %}`
 
-# 扩展
+## 扩展
 * i18n：`<P>{% trans %}Hello {{ user }}{% endtrans %}</p>`，标记一个段为可译的
 * 表达式语句：`{% do navigation.append('a string') %}`，工作几乎如同常规的变量表达式，不打印任何东西，可以用于修改列表
 * 循环控制：在循环中添加`break`、`continue`支持
 * with语句：可以创建一个新的作用域，该作用域中的变量在外部是不可以见的
 * 自动转义扩展：可以在模板中开启或者关闭自动转义，`{% autoescape true %}...自动转义开启...{% autoescape %}`
 
-# 集成
+## 集成
 * Jinja2提供一些代码来继承到其他工具，如框架、Babel库或偏好id编辑器的奇特的代码高亮
 
-# 提示和技巧
+## 提示和技巧
 * Null-Master退回：支持动态继承并且只要`extends`标签没有被访问过，就不分辨父模板和子模板。首个extends标签前的包括空白字符的所有东西会被打印出来而不是被忽略
 * 交替的行：对一个表格或列表的每行使用不同的样式，可以使用loop对象的cycle方法，`<li class="{ loop.cycle('odd', 'even') }">{{ row }}</li>`
 * 高亮活动菜单项：在block外的声明在子模板中是全局的，并且在布局模板求值前执行，在子模板中定义活动的菜单项，`{% set active_page = "index" %}`
 * 访问父级循环：特殊的loop变量总是指向最里层的循环，在里层访问外层的循环，可以给它设置别名，`{% set rowloop = loop %}`
 
-# 参考资料
+## 参考资料
 * [http://docs.jinkan.org/docs/jinja2/index.html](http://docs.jinkan.org/docs/jinja2/index.html)
