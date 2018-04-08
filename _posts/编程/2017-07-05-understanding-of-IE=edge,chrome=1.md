@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 关于content="IE=edge,chrome=1″的理解
+title: 关于content=IE=edge,chrome=1的理解
 category: 编程
 tag: html
-exception: 关于content="IE=edge,chrome=1″的理解
+exception: 关于content=IE=edge,chrome=1的理解
 readtime: 5
 ---
 ## GCF的定义
