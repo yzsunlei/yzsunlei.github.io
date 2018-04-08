@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何看待 CSS 中 BEM 的命名方式？
+title: 如何看待 CSS 中 BEM 的命名方式
 category: 编程
 tag: css
 exception: 现代的Web应用可以执行强大的操作和提供丰富的交互性，很多逻辑从服务器端迁移到浏览器端，那组织和管理大量的JavaScript和CSS代码就是一个复杂的问题了。下面我们看看CSS的一种方法学
