@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 怎么用js将网页保存成图片？
+title: 怎么用js将网页保存成图片
 category: 编程
 tag: JavaScript
 exception: 最近需要做的一个功能，就是能够通过程序将网页截取下来保存为图片，一时不知道怎么做，就在网上学习了一下，总结如下
