@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Vue.js核心知识之模板渲染
+title: 1-2. Vue.js核心知识之模板渲染
 category: Vue.js核心知识及简单实战
 tag: vue
-exception: `Vue.js` 使用了基于 `HTML` 的模板语法，允许开发者声明式地将 `DOM` 绑定至底层 `Vue` 实例的数据。所有 `Vue.js` 的模板都是合法的 HTML ，所以能被遵循规范的浏览器和 `HTML` 解析器解析。
+exception: Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。所有 Vue.js 的模板都是合法的 HTML ，所以能被遵循规范的浏览器和 HTML 解析器解析。
 readtime: 8
 ---
 

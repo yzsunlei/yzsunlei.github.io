@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue.js核心知识之组件化
+title: 1-5. Vue.js核心知识之组件化
 category: Vue.js核心知识及简单实战
 tag: vue
 exception: 组件 (Component) 是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。
