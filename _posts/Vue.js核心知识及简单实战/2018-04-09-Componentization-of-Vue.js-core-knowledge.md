@@ -44,7 +44,7 @@ readtime: 12
 </template>
 <script>
   var Child = {
-    template: '<div>我的组件</div>'
+    template: '<div>我的局部组件</div>'
   }
 
   new Vue({

@@ -77,7 +77,7 @@ readtime: 8
   {{ value }}
  </li>
 </ul>
-<!-- object对象中的数据 -->
+<!-- object对象中的数据渲染成列表 -->
 new Vue({
  el: '#object',
  data: {

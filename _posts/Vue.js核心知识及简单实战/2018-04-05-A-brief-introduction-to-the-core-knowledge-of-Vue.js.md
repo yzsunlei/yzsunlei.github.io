@@ -39,14 +39,14 @@ readtime: 8
 <div id="app">
  {{ message }}
 </div>
-<srcipt>
- var app = new Vue({
+<script>
+ new Vue({
   el: '#app',
   data: {
    message: 'Hello Vue!'
   }
  })
-</srcipt>
+</script>
 </body>
 </html>
 ```
@@ -67,14 +67,14 @@ readtime: 8
  <input v-model="message">
  <p>你输入的内容是: {{ message }}</p>
 </div>
-<srcipt>
- var app = new Vue({
+<script>
+ new Vue({
    el: '#app',
    data: {
      message: ''
    }
  })
-</srcipt>
+</script>
 </body>
 </html>
 ```
@@ -95,7 +95,7 @@ readtime: 8
 </div>
 <script>
  new Vue({
-  el: 'app',
+  el: '#app',
   methods: {
    say: function (message) {
     alert(message)
