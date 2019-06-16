@@ -14,12 +14,16 @@ readtime: 15
 
 ## 设计模式的分类：
 ### 创建型设计模式：
-* 01、简单工厂模式
-介绍：又叫静态工厂方法，由一个工厂对象决定创建某一种产品对象类的实例。主要用来创建同一类对象。
+* 01、简单工厂模式 
+
+介绍：又叫静态工厂方法，由一个工厂对象决定创建某一种产品对象类的实例。主要用来创建同一类对象。 
+
 示例：[https://github.com/yzsunlei/javascript-design-mode/blob/master/01、简单工厂模式.md](https://github.com/yzsunlei/javascript-design-mode/blob/master/01、简单工厂模式.md)
 
-* 02、工厂方法模式
-介绍：工厂父类负责定义创建产品对象的公共接口，而工厂子类就是负责生成具体的产品对象，这个方法实现的是通过工厂子类可以确定究竟应该实例化哪一个具体产品类。
+* 02、工厂方法模式 
+
+介绍：工厂父类负责定义创建产品对象的公共接口，而工厂子类就是负责生成具体的产品对象，这个方法实现的是通过工厂子类可以确定究竟应该实例化哪一个具体产品类。 
+
 示例：[https://github.com/yzsunlei/javascript-design-mode/blob/master/02、工厂方法模式.md](https://github.com/yzsunlei/javascript-design-mode/blob/master/02、工厂方法模式.md)
 
 * 03、抽象工厂模式
