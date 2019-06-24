@@ -35,7 +35,7 @@ readtime: 6
 * [Graph.js](https://github.com/yzsunlei/yzsunlei.github.io/blob/master/_codes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/11.graph.js)
 
 # 排序算法
-* [Sort.js](https://github.com/yzsunlei/yzsunlei.github.io/blob/master/_codes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/12.sort.js)
+* [Sort.js](https://github.com/yzsunlei/yzsunlei.github.io/blob/master/_codes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/sort.js)
 
 # 检索算法
 * [Search.js](https://github.com/yzsunlei/yzsunlei.github.io/blob/master/_codes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/13.search.js)
