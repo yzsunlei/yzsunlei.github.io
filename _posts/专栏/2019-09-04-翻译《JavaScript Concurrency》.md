@@ -1,9 +1,8 @@
-
 ---
 layout: post
 title: 翻译《JavaScript Concurrency》
 category: 专栏
-tag: javascript
+tag: JavaScript
 exception: 
 readtime: 16
 ---
