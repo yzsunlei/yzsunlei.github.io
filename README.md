@@ -1,17 +1,21 @@
 # 小磊哥er的博客
 
-公网地址：[http://www.yzsunlei.com](http://www.yzsunlei.com)
+公网地址：[http://www.yzsunlei.com](http://www.yzsunlei.com) 
 
-----------
+你好，我是小磊哥er，欢迎浏览我的博客。我的写作分类如下： 
 
  [专栏](_posts/专栏)  [编程](_posts/编程)  [阅读](_posts/阅读) [思考](_posts/思考)
 
-----------
+另外，我还针对JavaScript编程做了一些知识梳理。目前分类如下： 
 
+ [「JavaScript学习资料整理」系列](https://github.com/yzsunlei/awesome-web-tutorial)  [「JavaScript技术外文翻译」系列](https://github.com/yzsunlei/javascript-article-translate)  [「Vue生态库源码解析」系列](https://github.com/yzsunlei/javascript-series-code-analyzing)  
+ [「JavaScript来说数据结构」系列](https://github.com/yzsunlei/javascript-data-structure)  [「JavaScript来说设计模式」系列](https://github.com/yzsunlei/javascript-design-mode)
+
+最后，邀请你一起坚持阅读和写作。
 
 ## 专栏
 
-- [翻译《JavaScript Concurrency》](_posts/专栏/2019-09-04-翻译《JavaScript Concurrency》.md)
+- [翻译《JavaScript Concurrency》](_posts/专栏/2019-09-04-翻译《JavaScript%20Concurrency》.md)
 
 - [2019-02-10-知识图谱核心知识与相关应用](_posts/专栏/2019-02-10-知识图谱核心知识与相关应用.md)
 
