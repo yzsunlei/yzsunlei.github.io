@@ -12,7 +12,7 @@ readtime: 16
 并发编程方面的知识，主要涉及到Promises、Generators、Web workers和Node中的Evented IO等知识点。Web workers虽然现在兼容性还不是太好，
 随着技术的发展，它在并发处理和并行计算方面一定会大显身手。
 
-- 翻译稿地址：https://github.com/yzsunlei/javascript_concurrency_translation
+- 翻译稿地址：[https://javascript-concurrency.gitbook.io/](https://javascript-concurrency.gitbook.io/)
 
 - 由于能力有限，翻译若有错误之处，希望朋友们提issue给我，感谢！
 
