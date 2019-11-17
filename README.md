@@ -15,11 +15,11 @@
 
 ## 专栏
 
-- [翻译《JavaScript Concurrency》](_posts/专栏/2019-09-04-翻译《JavaScript%20Concurrency》.md)
+- [2019-09-04-「翻译《JavaScript Concurrency》」](_posts/专栏/2019-09-04-翻译《JavaScript%20Concurrency》.md)
 
-- [2019-02-10-知识图谱核心知识与相关应用](_posts/专栏/2019-02-10-知识图谱核心知识与相关应用.md)
+- [2019-02-10-「知识图谱核心知识与相关应用」](_posts/专栏/2019-02-10-知识图谱核心知识与相关应用.md)
 
-- [2018-04-13-Vue.js核心知识及简单实战](_posts/专栏/2018-04-13-Vue.js核心知识及简单实战.md)
+- [208-04-13-「Vue.js核心知识及简单实战」](_posts/专栏/2018-04-13-Vue.js核心知识及简单实战.md)
 
 ## 编程
 
