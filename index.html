@@ -9,7 +9,7 @@ title: 首页
     </div>
 </div>
 
-{% for post in site.posts and page.categories = '编程' %}
+{% for post in site.posts limit:10 offset:0 reversed %}
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
