@@ -3,13 +3,19 @@ layout: default
 title: 首页
 ---
 
-<div class="columns" style="display: none;">
+<div class="columns">
+    {% for post in site.posts limit:100 offset:0 reversed %}
+    {% if post.category == '专栏' %}
     <div class="col">
-        <h3 class="title"></h3>
+        <h3 class="title">{{post.title}}</h3>
+        <p class="exception">{{post.exception}}</p>
     </div>
+    {% endif %}
+    {% endfor %}
 </div>
 
-{% for post in site.posts limit:10 offset:0 reversed %}
+{% for post in site.posts limit:20 offset:0 reversed %}
+{% if post.category == '编程' %}
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
@@ -53,4 +59,5 @@ title: 首页
     </div>
 </div>
 <hr>
+{% endif %}
 {% endfor %}
