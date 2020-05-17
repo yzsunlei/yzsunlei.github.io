@@ -3,7 +3,13 @@ layout: default
 title: 首页
 ---
 
-{% for post in site.posts %}
+<div class="columns" style="display: none;">
+    <div class="col">
+        <h3 class="title"></h3>
+    </div>
+</div>
+
+{% for post in site.posts | where 'categories', '编程' %}
 <div class="posts posts-expand">
     <div class="post post-type-normal ">
         <div class="post-header">
