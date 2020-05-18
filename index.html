@@ -21,7 +21,7 @@ title: 首页
 
 <div class="recents">
     <h1>最新博文</h1>
-    {% for post in site.posts limit:20 offset:0 reversed %}
+    {% for post in site.posts limit:50 offset:0 reversed %}
     {% if post.category == '编程' %}
     <div class="posts posts-expand">
         <div class="post post-type-normal ">
