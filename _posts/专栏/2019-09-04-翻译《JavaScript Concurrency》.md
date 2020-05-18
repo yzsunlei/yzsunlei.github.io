@@ -1,15 +1,14 @@
 ---
 layout: post
-title: 翻译《JavaScript Concurrency》
+title: 翻译《JavaScript Concurrency》笔记
 category: 专栏
 tag: JavaScript
-exception: 
+exception: 《JavaScript Concurrency》中文翻译笔记，主要讲解JavaScript并发编程方面的知识
 readtime: 16
 ---
 
 ## 写在前面
-- 最近两三个月恶补了一下es6相关的知识点，然后大部分空闲时间在翻译《JavaScript Concurrency》这本书。这本书主要讲解JavaScript
-并发编程方面的知识，主要涉及到Promises、Generators、Web workers和Node中的Evented IO等知识点。Web workers虽然现在兼容性还不是太好，
+- 最近两三个月恶补了一下es6相关的知识点，然后大部分空闲时间在翻译《JavaScript Concurrency》这本书。这本书主要讲解JavaScript并发编程方面的知识，主要涉及到Promises、Generators、Web workers和Node中的Evented IO等知识点。Web workers虽然现在兼容性还不是太好，
 随着技术的发展，它在并发处理和并行计算方面一定会大显身手。
 
 - 翻译稿地址：[https://javascript-concurrency.gitbook.io/](https://javascript-concurrency.gitbook.io/)
