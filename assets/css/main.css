@@ -2198,3 +2198,11 @@ ul li {
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+@media (max-width: 767px) {
+  .columns {
+    column-count: 1;
+  }
+  .columns .col {
+    height: auto;
+  }
+}
