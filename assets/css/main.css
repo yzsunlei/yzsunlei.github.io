@@ -1901,7 +1901,7 @@ ul li {
 }
 @media (max-width: 767px) {
   .header-inner {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 10px;
   }
 }
@@ -2205,7 +2205,7 @@ ul li {
   .columns .col {
     height: auto;
   }
-  .columns .col {
+  .columns h2 {
     font-size: 22px;
   }
   .recents h1 {
