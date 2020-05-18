@@ -1901,7 +1901,7 @@ ul li {
 }
 @media (max-width: 767px) {
   .header-inner {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding: 10px;
   }
 }
@@ -2204,5 +2204,11 @@ ul li {
   }
   .columns .col {
     height: auto;
+  }
+  .columns .col {
+    font-size: 22px;
+  }
+  .recents h1 {
+    display: none;
   }
 }
